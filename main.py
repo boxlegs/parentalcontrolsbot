@@ -18,12 +18,14 @@ async def on_ready():
 
 
 async def play_sound():
+
     # Check if Ben is in a voice channel
-    print("Attempting to play sound...")
+    print("Searching for penjamin...")
     guild = bot.get_guild(GUILD_ID)
     user = guild.get_member(int(BEN_USER_ID))
     if user.voice:
         print("Found the slammer! Let's count down!")
+
             # Find his channel and snipe him
         voice_channel = user.voice.channel
         voice_client = await voice_channel.connect()
